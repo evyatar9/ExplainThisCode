@@ -1,0 +1,63 @@
+{
+  "name": "etc",
+  "displayName": "ExplainThisCode",
+  "description": "ExplainThisCode is A VSCode extension that uses the ChatGPT API to provide explanations for selected code.",
+  "publisher": "evyatar9",
+  "version": "1.0.0",
+  "icon": "images/logo.png",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onCommand:explain-this-code.explainCode"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "explain-this-code.explainCode",
+        "title": "ETC"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Explain This Code",
+      "properties": {
+        "explainThisCode.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "ChatGPT API key to use with the extension (https://beta.openai.com/account/api-keys)"
+        }
+      }
+    },
+    "keybindings": [
+      {
+          "command": "explain-this-code.explainCode",
+          "key": "ctrl+alt+e",
+          "mac": "shift+cmd+e"
+      }
+  ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@vscode/test-electron": "^2.2.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "https": "^1.0.0"
+  }
+}
