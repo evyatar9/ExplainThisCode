@@ -137,8 +137,11 @@ async function activate(context) {
 			}
 
 			const comments = commentConfig.get(editor.document.languageId) || await GetCommentConfiguration(languageConfigFiles, commentConfig, editor.document.languageId);
-			const blockCommentStart = comments.blockComment ? comments.blockComment[0] : null;
-			const blockCommentEnd = comments.blockComment ? comments.blockComment[1] : null;
+			const blockCommentStart = comments?.blockComment?.[0] ??  '/*';
+			const blockCommentEnd = comments?.blockComment?.[1] ?? '*/';
+			if (!comments) {
+				vscode.window.showInformationMessage('Unable to identify the programming language. Using default block comment delimiters: /* and */');
+			}
 
 			const editRange = editor.document.lineAt(editor.selection.start.line).range.start;
 
