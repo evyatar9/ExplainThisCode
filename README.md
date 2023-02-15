@@ -79,3 +79,8 @@ Discord: [evyatar9#5800](https://discordapp.com/users/812805349815091251)
 ## Contributing
 
 If you would like to contribute to the ETC extension, feel free to submit a pull request or report any issues you encounter on the [**E**xplain**T**his**C**ode repository](https://github.com/evyatar9/ExplainThisCode).
+
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/evyatar9/ExplainThisCode.svg)](https://starchart.cc/evyatar9/ExplainThisCode)
