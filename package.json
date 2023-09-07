@@ -3,7 +3,8 @@
   "displayName": "ExplainThisCode",
   "description": "ExplainThisCode is A VSCode extension that uses the ChatGPT API to provide explanations for selected code.",
   "publisher": "evyatar9",
-  "version": "1.0.0",
+  "repository": "https://github.com/evyatar9/ExplainThisCode",
+  "version": "2.0.0",
   "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.74.0"

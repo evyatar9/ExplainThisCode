@@ -58,6 +58,10 @@ This will set the value of the `explainThisCode.apiKey` setting to `'my-api-key'
 
 ## Release Notes
 
+### 2.0.0
+
+- **GPT-4 Integration**: Benefit from the latest advancements in natural language processing, providing even more insightful and accurate code explanations.
+
 ### 1.0.0
 
 - Initial release of the ETC extension.

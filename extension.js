@@ -59,12 +59,12 @@ async function GetCommentConfiguration(languageConfigFiles, commentConfig, langu
 
 async function explainCode(code, api_key) {
 
-	const MODEL = 'text-davinci-003';
+	const MODEL = 'gpt-4';
 	const prompt = "Explain this code:\n" + code;
 	const options = {
 		hostname: 'api.openai.com',
 		port: 443,
-		path: '/v1/completions',
+		path: '/v1/chat/completions',
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -88,8 +88,7 @@ async function explainCode(code, api_key) {
 
 	req.write(JSON.stringify({
 		model: MODEL,
-		prompt: prompt,
-		max_tokens: 2048
+		messages: [{"role": "user","content":prompt}]
 	}));
 	req.end();
 
@@ -148,7 +147,7 @@ async function activate(context) {
 
 			editor.edit(editBuilder => {
 				if (editor !== undefined) {
-					editBuilder.insert(editRange, blockCommentStart + explain["choices"][0]["text"] + "\n" + blockCommentEnd + "\n");
+					editBuilder.insert(editRange, blockCommentStart + explain["choices"][0]["message"]["content"] + "\n" + blockCommentEnd + "\n");
 				}
 			});
 		} catch (error) {
