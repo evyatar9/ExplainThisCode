@@ -78,7 +78,12 @@ This extension is licensed under the [MIT License](https://chat.openai.com/LICEN
 
 Telegram: [@evyatar9](https://t.me/evyatar9)
 
-Discord: [evyatar9#5800](https://discordapp.com/users/812805349815091251)
+Discord: [evyatar9](https://discord.com/users/812805349815091251)
+
+## Support
+You can support my work buying me a coffee:
+
+[<img width=250 alt="buymeacoffe" src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png">](https://www.buymeacoffee.com/evyatar9)
 
 ## Contributing
 
